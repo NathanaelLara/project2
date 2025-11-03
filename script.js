@@ -28,7 +28,8 @@ function initializeApp() {
 
 // Register service worker for PWA functionality
 function initServiceWorker() {
-  if ('serviceWorker' in navigator) {
+  // Only register service worker in production
+  if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
     window.addEventListener('load', () => {
       navigator.serviceWorker
         .register('/service-worker.js')
@@ -49,6 +50,8 @@ function initServiceWorker() {
           console.log('Service Worker registration failed:', error);
         });
     });
+  } else {
+    console.log('Service Worker disabled in development');
   }
 }
 
