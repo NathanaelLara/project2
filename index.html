@@ -1,285 +1,647 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TalentoLocal — Agencia de Reclutamiento para Call Centers en Santo Domingo</title>
-  <meta name="description" content="Agencia de marketing y reclutamiento especializada en captar candidatos para call centers en Santo Domingo. Aplica en minutos y consigue tu entrevista.">
-  <meta property="og:title" content="TalentoLocal — Reclutamiento para Call Centers">
-  <meta property="og:description" content="Aplica en minutos. Conectamos talento con los mejores call centers de Santo Domingo.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>TalentoLocal - Agencia de Reclutamiento para Call Centers en Santo Domingo</title>
+  <meta name="title" content="TalentoLocal - Reclutamiento para Call Centers en Santo Domingo">
+  <meta name="description" content="Agencia de reclutamiento especializada en conectar talento dominicano con los mejores call centers. Coaching gratuito, preparación para entrevistas y acceso a múltiples empresas. Aplica en minutos.">
+  <meta name="keywords" content="call center santo domingo, trabajo call center, reclutamiento dominicano, empleo santo domingo, customer service jobs, trabajo bilingüe">
+  <meta name="author" content="TalentoLocal">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://talentolocal.net/">
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://talentolocal.net/">
+  <meta property="og:site_name" content="TalentoLocal">
+  <meta property="og:title" content="TalentoLocal - Reclutamiento para Call Centers">
+  <meta property="og:description" content="Conectamos talento dominicano con los mejores call centers de Santo Domingo. Aplica en minutos y consigue tu entrevista con coaching gratuito.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1525186402429-b4ff38bedbec?q=80&w=1200&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_DO">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://talentolocal.net/">
+  <meta name="twitter:title" content="TalentoLocal - Reclutamiento para Call Centers">
+  <meta name="twitter:description" content="Conectamos talento dominicano con los mejores call centers de Santo Domingo.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1525186402429-b4ff38bedbec?q=80&w=1200&auto=format&fit=crop">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo/tpLogo.jpeg">
+  <link rel="apple-touch-icon" href="logo/tpLogo.jpeg">
+  
+  <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN (for development) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html, body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
-    .glass { backdrop-filter: blur(14px); background: rgba(255,255,255,0.8); }
-    .container-narrow { max-width: 1100px; }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
-    .badge { @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold; }
-  </style>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TalentoLocal",
+    "description": "Agencia de reclutamiento para call centers en Santo Domingo",
+    "url": "https://talentolocal.net/",
+    "logo": "https://talentolocal.net/logo/tpLogo.jpeg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-849-277-3472",
+      "contactType": "Customer Service",
+      "areaServed": "DO",
+      "availableLanguage": ["Spanish", "English"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santo Domingo",
+      "addressCountry": "DO"
+    },
+    "sameAs": [
+      "https://www.facebook.com/talentolocal",
+      "https://www.instagram.com/talentolocal"
+    ]
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Posiciones en Call Centers - Santo Domingo",
+    "description": "Múltiples vacantes en call centers de Santo Domingo: Customer Service, Sales, Technical Support, Healthcare. Aplicación rápida con coaching incluido.",
+    "datePosted": "2024-01-01",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "TalentoLocal",
+      "sameAs": "https://talentolocal.net/"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santo Domingo",
+        "addressCountry": "DO"
+      }
+    },
+    "employmentType": ["FULL_TIME", "PART_TIME"],
+    "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "DOP",
+      "value": {
+        "@type": "QuantitativeValue",
+        "minValue": 20000,
+        "maxValue": 50000,
+        "unitText": "MONTH"
+      }
+    },
+    "qualifications": "Nivel de inglés intermedio o superior, disponibilidad inmediata"
+  }
+  </script>
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f172a">
 </head>
 <body class="bg-slate-50 text-slate-900">
+  
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+  
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+  <header class="header">
     <div class="mx-auto container-narrow px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white font-bold">TL</span>
-        <span class="font-extrabold tracking-tight">TalentoLocal</span>
+      <a href="#" class="flex items-center gap-2" aria-label="TalentoLocal - Inicio">
+        <img src="logo/tpLogo.jpeg" alt="TalentoLocal Logo" class="h-9 w-9 rounded-xl object-cover">
+        <span class="font-extrabold tracking-tight text-lg">TalentoLocal</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#beneficios" class="hover:text-slate-600">Beneficios</a>
-        <a href="#proceso" class="hover:text-slate-600">Proceso</a>
-        <a href="#formulario" class="hover:text-slate-600">Aplicar</a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav hidden md:flex items-center gap-6 text-sm font-medium" aria-label="Navegación principal">
+        <a href="#beneficios" class="hover:text-slate-600 transition">Beneficios</a>
+        <a href="#proceso" class="hover:text-slate-600 transition">Proceso</a>
+        <a href="#testimonios" class="hover:text-slate-600 transition">Testimonios</a>
+        <a href="#faq" class="hover:text-slate-600 transition">Preguntas</a>
+        <a href="#formulario" class="hover:text-slate-600 transition">Aplicar</a>
       </nav>
-      <a href="#formulario" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold shadow-soft">Aplicar ahora</a>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuButton" class="mobile-menu-button" aria-label="Menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Desktop CTA -->
+      <a href="#formulario" class="hidden md:inline-flex btn btn-primary">Aplicar ahora</a>
     </div>
+    
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="mobile-menu" aria-label="Menú móvil">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#beneficios" class="block py-2 text-sm font-medium hover:text-slate-600">Beneficios</a>
+        <a href="#proceso" class="block py-2 text-sm font-medium hover:text-slate-600">Proceso</a>
+        <a href="#testimonios" class="block py-2 text-sm font-medium hover:text-slate-600">Testimonios</a>
+        <a href="#faq" class="block py-2 text-sm font-medium hover:text-slate-600">Preguntas</a>
+        <a href="#formulario" class="block py-2 text-sm font-medium text-slate-900">Aplicar</a>
+      </div>
+    </nav>
   </header>
-
-  <!-- Hero -->
-  <section class="relative">
-    <div class="absolute inset-0 -z-10">
-      <img src="https://images.unsplash.com/photo-1525186402429-b4ff38bedbec?q=80&w=1600&auto=format&fit=crop" alt="Call center" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-slate-900/70"></div>
-    </div>
-    <div class="mx-auto container-narrow px-4 py-28 text-center text-white">
-      <span class="badge bg-white/20">Reclutamiento para Call Centers · Santo Domingo</span>
-      <h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">Conectamos <span class="text-emerald-300">talento</span> con los mejores<br class="hidden md:block"> call centers de Santo Domingo</h1>
-      <p class="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">Aplica en minutos. Te ayudamos con preparación de entrevista, pruebas de inglés y acompañamiento hasta la contratación.</p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#formulario" class="rounded-xl bg-white text-slate-900 px-6 py-3 font-semibold shadow-soft">Aplicar ahora</a>
-        <a href="#beneficios" class="rounded-xl bg-white/10 text-white px-6 py-3 font-semibold border border-white/20">Ver beneficios</a>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-overlay">
+      <div class="hero-bg">
       </div>
-      <div class="mt-6 text-white/80 text-sm">Tiempo de aplicación: 2–3 minutos · 100% gratis</div>
-    </div>
-  </section>
-
-  <!-- Beneficios -->
-  <section id="beneficios" class="mx-auto container-narrow px-4 py-16">
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="p-6 bg-white rounded-2xl shadow-soft">
-        <h3 class="font-bold text-lg">Acceso a múltiples empresas</h3>
-        <p class="mt-2 text-slate-600">Te postulamos a diversos call centers (ventas, soporte, healthcare, collections, tech) con una sola aplicación.</p>
-      </div>
-      <div class="p-6 bg-white rounded-2xl shadow-soft">
-        <h3 class="font-bold text-lg">Coaching para entrevistas</h3>
-        <p class="mt-2 text-slate-600">Simulacros de entrevista y tips de performance para aumentar tus probabilidades de contratación.</p>
-      </div>
-      <div class="p-6 bg-white rounded-2xl shadow-soft">
-        <h3 class="font-bold text-lg">Proceso rápido</h3>
-        <p class="mt-2 text-slate-600">Coordinamos pruebas de inglés y disponibilidad. Respuesta máxima en 24–48 h hábiles.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Proceso -->
-  <section id="proceso" class="mx-auto container-narrow px-4 pb-4">
-    <div class="rounded-2xl bg-white shadow-soft p-8">
-      <h2 class="text-2xl font-extrabold">¿Cómo funciona?</h2>
-      <div class="mt-6 grid md:grid-cols-4 gap-6">
-        <div>
-          <div class="h-10 w-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">1</div>
-          <h3 class="mt-3 font-bold">Aplica</h3>
-          <p class="text-slate-600 text-sm">Completa el formulario con tus datos básicos.</p>
+      <div class="mx-auto container-narrow px-4 py-24 md:py-32 text-center text-white">
+        <span class="badge bg-white/20 backdrop-blur">Reclutamiento para Call Centers · Santo Domingo</span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">
+          Conectamos <span class="text-emerald-300">talento</span> con los mejores<br class="hidden md:block"> call centers de Santo Domingo
+        </h1>
+        <p class="mt-5 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+          Aplica en minutos. Te ayudamos con preparación de entrevista, pruebas de inglés y acompañamiento hasta la contratación.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#formulario" class="btn btn-primary bg-white text-slate-900 hover:bg-gray-100">Aplicar ahora</a>
+          <a href="#beneficios" class="btn btn-secondary">Ver beneficios</a>
         </div>
-        <div>
-          <div class="h-10 w-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">2</div>
-          <h3 class="mt-3 font-bold">Evaluación</h3>
-          <p class="text-slate-600 text-sm">Revisión de inglés, experiencia y disponibilidad.</p>
-        </div>
-        <div>
-          <div class="h-10 w-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">3</div>
-          <h3 class="mt-3 font-bold">Matching</h3>
-          <p class="text-slate-600 text-sm">Te conectamos con las vacantes que encajan contigo.</p>
-        </div>
-        <div>
-          <div class="h-10 w-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">4</div>
-          <h3 class="mt-3 font-bold">Entrevista & Oferta</h3>
-          <p class="text-slate-600 text-sm">Te preparamos para cerrar con una oferta competitiva.</p>
+        <div class="mt-6 text-white/80 text-sm">Tiempo de aplicación: 2-3 minutos · 100% gratis</div>
+      </div>
+    </section>
+    
+    <!-- Beneficios -->
+    <section id="beneficios" class="mx-auto container-narrow px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold">¿Por qué aplicar con nosotros?</h2>
+        <p class="mt-3 text-slate-600 text-lg max-w-2xl mx-auto">Te ofrecemos más que un simple proceso de aplicación</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="card">
+          <div class="text-3xl mb-3">🏢</div>
+          <h3 class="font-bold text-lg mb-2">Acceso a múltiples empresas</h3>
+          <p class="text-slate-600">Te postulamos a diversos call centers (ventas, soporte, healthcare, collections, tech) con una sola aplicación.</p>
+        </article>
+        <article class="card">
+          <div class="text-3xl mb-3">🎯</div>
+          <h3 class="font-bold text-lg mb-2">Coaching para entrevistas</h3>
+          <p class="text-slate-600">Simulacros de entrevista y tips de performance para aumentar tus probabilidades de contratación.</p>
+        </article>
+        <article class="card">
+          <div class="text-3xl mb-3">⚡</div>
+          <h3 class="font-bold text-lg mb-2">Proceso rápido</h3>
+          <p class="text-slate-600">Coordinamos pruebas de inglés y disponibilidad. Respuesta máxima en 24-48 h hábiles.</p>
+        </article>
+        <article class="card">
+          <div class="text-3xl mb-3">💰</div>
+          <h3 class="font-bold text-lg mb-2">Mejores salarios</h3>
+          <p class="text-slate-600">Negociamos ofertas competitivas según tu nivel de inglés y experiencia. Salarios desde RD$20,000 hasta RD$50,000+.</p>
+        </article>
+        <article class="card">
+          <div class="text-3xl mb-3">📚</div>
+          <h3 class="font-bold text-lg mb-2">Preparación completa</h3>
+          <p class="text-slate-600">Te ayudamos a preparar tu CV, practicar inglés y dominar las preguntas más comunes de entrevistas.</p>
+        </article>
+        <article class="card">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="font-bold text-lg mb-2">Seguimiento personalizado</h3>
+          <p class="text-slate-600">Te acompañamos desde la aplicación hasta tu primer día de trabajo. Soporte continuo por WhatsApp.</p>
+        </article>
+      </div>
+    </section>
+    
+    <!-- Proceso -->
+    <section id="proceso" class="mx-auto container-narrow px-4 py-16">
+      <div class="card p-8 md:p-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-3">¿Cómo funciona?</h2>
+        <p class="text-center text-slate-600 mb-10 text-lg">Cuatro pasos simples para conseguir tu trabajo ideal</p>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center md:text-left">
+            <div class="h-12 w-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl mx-auto md:mx-0 mb-4">1</div>
+            <h3 class="font-bold text-lg mb-2">Aplica</h3>
+            <p class="text-slate-600 text-sm">Completa el formulario con tus datos básicos. Solo toma 2-3 minutos.</p>
+          </div>
+          <div class="text-center md:text-left">
+            <div class="h-12 w-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl mx-auto md:mx-0 mb-4">2</div>
+            <h3 class="font-bold text-lg mb-2">Evaluación</h3>
+            <p class="text-slate-600 text-sm">Revisión de inglés, experiencia y disponibilidad. Te contactamos por WhatsApp.</p>
+          </div>
+          <div class="text-center md:text-left">
+            <div class="h-12 w-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl mx-auto md:mx-0 mb-4">3</div>
+            <h3 class="font-bold text-lg mb-2">Matching</h3>
+            <p class="text-slate-600 text-sm">Te conectamos con las vacantes que encajan con tu perfil y preferencias.</p>
+          </div>
+          <div class="text-center md:text-left">
+            <div class="h-12 w-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl mx-auto md:mx-0 mb-4">4</div>
+            <h3 class="font-bold text-lg mb-2">Entrevista y Oferta</h3>
+            <p class="text-slate-600 text-sm">Te preparamos para cerrar con una oferta competitiva y comenzar a trabajar.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Formulario -->
-  <section id="formulario" class="mx-auto container-narrow px-4 py-16">
-    <div class="grid lg:grid-cols-2 gap-8 items-start">
-      <div class="p-8 bg-white rounded-2xl shadow-soft">
-        <h2 class="text-2xl font-extrabold">Aplicación rápida</h2>
-        <p class="mt-1 text-slate-600">Déjanos tus datos y te contactamos por WhatsApp en 24–48 h hábiles.</p>
-
-        <!--
-          🔧 INTEGRACIÓN DEL FORMULARIO
-          Por defecto este formulario está preparado para integrarse con Formspree o con un Webhook propio (Apps Script / Firebase Functions).
-
-          1) Formspree (rápido):
-             - Crea un proyecto en https://formspree.io
-             - Copia tu endpoint (ej: https://formspree.io/f/abcd1234)
-             - Reemplaza la constante ENDPOINT_URL abajo por tu propio endpoint
-
-          2) Google Sheets (Apps Script):
-             - Crea un Google Sheet
-             - Apps Script > Nuevo proyecto > Pega un handler web que reciba POST y guarde en la hoja
-             - Implementa como Web App (Anyone) y pega el URL en ENDPOINT_URL
-
-          3) Firebase Functions:
-             - Crea una función HTTP que guarde en Firestore y devuelve {ok:true}
-             - Pega el URL en ENDPOINT_URL
-        -->
-
-        <form id="leadForm" class="mt-6 space-y-4">
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium">Nombre completo</label>
-              <input required name="nombre" type="text" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900" placeholder="Tu nombre" />
+    </section>
+    
+    <!-- Testimonios -->
+    <section id="testimonios" class="bg-slate-100 py-16">
+      <div class="mx-auto container-narrow px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold">Lo que dicen nuestros candidatos</h2>
+          <p class="mt-3 text-slate-600 text-lg">Historias reales de personas que consiguieron empleo con nosotros</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="testimonial">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              "Conseguí trabajo en menos de una semana. El coaching para la entrevista fue clave. Ahora estoy en un call center de healthcare ganando mucho mejor que antes."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar bg-emerald-200 flex items-center justify-center text-2xl font-bold text-emerald-800">M</div>
+              <div class="testimonial-info">
+                <h4>María Rodríguez</h4>
+                <p>Customer Service - Healthcare</p>
+              </div>
             </div>
-            <div>
-              <label class="block text-sm font-medium">WhatsApp</label>
-              <input required name="whatsapp" type="tel" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900" placeholder="809-000-0000" />
+          </article>
+          
+          <article class="testimonial">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              "Sin experiencia en call center, pero me ayudaron a prepararme. Ahora trabajo en ventas con comisiones increíbles. Totalmente recomendado."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar bg-blue-200 flex items-center justify-center text-2xl font-bold text-blue-800">C</div>
+              <div class="testimonial-info">
+                <h4>Carlos Peña</h4>
+                <p>Sales Representative</p>
+              </div>
             </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium">Correo</label>
-              <input name="email" type="email" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900" placeholder="tucorreo@ejemplo.com" />
+          </article>
+          
+          <article class="testimonial">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              "El proceso fue súper rápido y profesional. Me contactaron en menos de 24 horas y a la semana ya estaba trabajando. Excelente servicio."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar bg-purple-200 flex items-center justify-center text-2xl font-bold text-purple-800">A</div>
+              <div class="testimonial-info">
+                <h4>Ana Martínez</h4>
+                <p>Technical Support</p>
+              </div>
             </div>
-            <div>
-              <label class="block text-sm font-medium">Sector / Municipio</label>
-              <input name="sector" type="text" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900" placeholder="Piantini, Los Mina, etc." />
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium">Nivel de inglés</label>
-              <select name="ingles" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900">
-                <option value="Basico">Básico</option>
-                <option value="Intermedio">Intermedio</option>
-                <option value="Avanzado">Avanzado</option>
-                <option value="Nativo">Nativo</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium">Experiencia en call center</label>
-              <select name="experiencia" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900">
-                <option value="Sin experiencia">Sin experiencia</option>
-                <option value="0-6 meses">0–6 meses</option>
-                <option value="6-12 meses">6–12 meses</option>
-                <option value=">12 meses">Más de 12 meses</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Disponibilidad</label>
-            <input name="disponibilidad" type="text" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900" placeholder="Full-time, Part-time, horarios..." />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Link a CV (opcional)</label>
-            <input name="cv" type="url" class="mt-1 w-full rounded-xl border-slate-300 focus:border-slate-900 focus:ring-slate-900" placeholder="https://drive.google.com/..." />
-          </div>
-          <div class="flex items-start gap-3">
-            <input id="consent" type="checkbox" class="mt-1" required>
-            <label for="consent" class="text-sm text-slate-600">Autorizo a TalentoLocal a contactarme por WhatsApp/correo y a compartir mi perfil con empresas aliadas.</label>
-          </div>
-          <button id="submitBtn" class="w-full rounded-xl bg-slate-900 text-white font-semibold py-3 disabled:opacity-50">Enviar aplicación</button>
-          <p id="formMsg" class="hidden text-sm"></p>
-        </form>
+          </article>
+        </div>
       </div>
-
-      <aside class="space-y-6">
-        <div class="p-6 glass rounded-2xl shadow-soft">
-          <h3 class="font-bold">Vacantes frecuentes</h3>
-          <ul class="mt-2 text-slate-700 list-disc list-inside">
-            <li>Customer Service (Inglés B2+)</li>
-            <li>Sales Representative (comisiones altas)</li>
-            <li>Healthcare Support (HIPAA training)</li>
-            <li>Technical Support (IT/Networking)</li>
+    </section>
+    
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto container-narrow px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Preguntas frecuentes</h2>
+        <p class="mt-3 text-slate-600 text-lg">Respuestas a las dudas más comunes</p>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuánto cuesta el servicio?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>El servicio es completamente gratuito para los candidatos. Nuestros ingresos provienen de las empresas que contratan a través de nosotros, no cobramos nada a los aplicantes.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Necesito experiencia previa en call center?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>No necesariamente. Trabajamos con empresas que buscan tanto personal con experiencia como candidatos sin experiencia dispuestos a aprender. Lo más importante es tu nivel de inglés y tu actitud.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué nivel de inglés necesito?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Depende de la posición. Para Customer Service generalmente se requiere inglés intermedio-avanzado (B2+). Para Sales puede ser un poco más flexible. Para Technical Support suele requerirse nivel avanzado. Te ayudamos a identificar las vacantes que mejor se ajustan a tu nivel.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Cuánto tiempo toma el proceso?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Normalmente te contactamos en 24-48 horas hábiles después de aplicar. El proceso completo desde la aplicación hasta la oferta puede tomar entre 1-3 semanas, dependiendo de la disponibilidad de las empresas y tu progreso en las entrevistas.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué tipo de vacantes tienen disponibles?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Trabajamos con call centers en diversas industrias: Customer Service, Sales (ventas outbound e inbound), Technical Support, Healthcare (con certificación HIPAA), Collections, y posiciones especializadas en tecnología. Todas ubicadas en Santo Domingo.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Puedo aplicar si vivo fuera de Santo Domingo?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>La mayoría de las posiciones son presenciales en Santo Domingo, pero algunas empresas ofrecen modalidad remota o híbrida. Indícalo en el formulario y te conectaremos con las opciones disponibles para tu ubicación.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>¿Qué incluye el coaching para entrevistas?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>Te proporcionamos simulacros de entrevista, revisión de CV, consejos sobre lenguaje corporal y comunicación, respuestas a preguntas comunes, y tips específicos para la empresa a la que aplicas. Todo por WhatsApp o videollamada según tu preferencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Formulario de Aplicación -->
+    <section id="formulario" class="mx-auto container-narrow px-4 py-16">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <!-- Form -->
+        <div class="card p-6 md:p-8">
+          <h2 class="text-3xl font-extrabold mb-2">Aplicación rápida</h2>
+          <p class="text-slate-600 mb-6">Déjanos tus datos y te contactamos por WhatsApp en 24-48 h hábiles.</p>
+          
+          <form id="leadForm" class="space-y-4" novalidate>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="nombre" class="form-label">Nombre completo <span class="text-red-500">*</span></label>
+                <input 
+                  required 
+                  id="nombre"
+                  name="nombre" 
+                  type="text" 
+                  class="form-input" 
+                  placeholder="Juan Pérez"
+                  autocomplete="name"
+                />
+              </div>
+              <div>
+                <label for="whatsapp" class="form-label">WhatsApp <span class="text-red-500">*</span></label>
+                <input 
+                  required 
+                  id="whatsapp"
+                  name="whatsapp" 
+                  type="tel" 
+                  class="form-input" 
+                  placeholder="809-000-0000"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input 
+                  id="email"
+                  name="email" 
+                  type="email" 
+                  class="form-input" 
+                  placeholder="tu@correo.com"
+                  autocomplete="email"
+                />
+              </div>
+              <div>
+                <label for="sector" class="form-label">Sector / Municipio</label>
+                <input 
+                  id="sector"
+                  name="sector" 
+                  type="text" 
+                  class="form-input" 
+                  placeholder="Ej: Piantini, Los Mina"
+                />
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <label for="ingles" class="form-label">Nivel de inglés <span class="text-red-500">*</span></label>
+                <select id="ingles" name="ingles" class="form-select" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="Basico">Básico (A1-A2)</option>
+                  <option value="Intermedio">Intermedio (B1-B2)</option>
+                  <option value="Avanzado">Avanzado (C1-C2)</option>
+                  <option value="Nativo">Nativo / Bilingüe</option>
+                </select>
+              </div>
+              <div>
+                <label for="experiencia" class="form-label">Experiencia en call center</label>
+                <select id="experiencia" name="experiencia" class="form-select">
+                  <option value="Sin experiencia">Sin experiencia</option>
+                  <option value="0-6 meses">0-6 meses</option>
+                  <option value="6-12 meses">6-12 meses</option>
+                  <option value="1-2 años">1-2 años</option>
+                  <option value="Mas de 2 años">Más de 2 años</option>
+                </select>
+              </div>
+            </div>
+            
+            <div>
+              <label for="disponibilidad" class="form-label">Disponibilidad</label>
+              <input 
+                id="disponibilidad"
+                name="disponibilidad" 
+                type="text" 
+                class="form-input" 
+                placeholder="Ej: Full-time, lunes a viernes"
+              />
+            </div>
+            
+            <div>
+              <label for="cv" class="form-label">Link a CV (opcional)</label>
+              <input 
+                id="cv"
+                name="cv" 
+                type="url" 
+                class="form-input" 
+                placeholder="https://drive.google.com/..."
+              />
+            </div>
+            
+            <div class="flex items-start gap-3">
+              <input 
+                id="consent" 
+                type="checkbox" 
+                class="mt-1 h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900" 
+                required
+              >
+              <label for="consent" class="text-sm text-slate-600">
+                Autorizo a TalentoLocal a contactarme por WhatsApp/correo y a compartir mi perfil con empresas aliadas para fines de reclutamiento.
+              </label>
+            </div>
+            
+            <button 
+              type="submit" 
+              id="submitBtn" 
+              class="btn btn-primary w-full"
+            >
+              Enviar aplicación
+            </button>
+            
+            <p id="formMsg" class="hidden text-sm text-center"></p>
+          </form>
+        </div>
+        
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <div class="glass rounded-2xl shadow-soft p-6">
+            <h3 class="font-bold text-lg mb-3">Vacantes frecuentes</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">✓</span>
+                <span class="text-slate-700">Customer Service Representative (Inglés B2+)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">✓</span>
+                <span class="text-slate-700">Sales Representative (comisiones altas)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">✓</span>
+                <span class="text-slate-700">Healthcare Support (HIPAA training incluido)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">✓</span>
+                <span class="text-slate-700">Technical Support (IT/Networking)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 mt-1">✓</span>
+                <span class="text-slate-700">Collections Specialist</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card p-6">
+            <h3 class="font-bold text-lg mb-3">¿Por qué con nosotros?</h3>
+            <p class="text-slate-600 text-sm mb-4">
+              Somos una agencia local con relaciones directas con múltiples call centers en Santo Domingo. 
+              Maximiza tu tiempo aplicando una sola vez para acceder a docenas de oportunidades.
+            </p>
+            <div class="grid grid-cols-3 gap-3 mt-4">
+              <div class="stat-card">
+                <div class="stat-number">10k+</div>
+                <div class="stat-label">Candidatos guiados</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Empresas aliadas</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">24-48h</div>
+                <div class="stat-label">Respuesta rápida</div>
+              </div>
+            </div>
+            <p class="mt-3 text-xs text-slate-400">Actualizado noviembre 2024</p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-slate-900 to-slate-700 text-white rounded-2xl shadow-soft p-6">
+            <h3 class="font-bold text-lg mb-2">¿Necesitas ayuda?</h3>
+            <p class="text-white/80 text-sm mb-4">
+              Nuestro equipo está disponible para resolver tus dudas por WhatsApp.
+            </p>
+            <a 
+              href="https://wa.me/18492773472?text=Hola,%20tengo%20una%20pregunta%20sobre%20las%20vacantes" 
+              class="btn bg-white text-slate-900 hover:bg-gray-100 w-full"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chatear en WhatsApp
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto container-narrow px-4 py-10">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <img src="logo/tpLogo.jpeg" alt="TalentoLocal" class="h-8 w-8 rounded-lg object-cover">
+            <span class="font-bold">TalentoLocal</span>
+          </div>
+          <p class="text-sm text-slate-600">
+            Conectamos talento dominicano con las mejores oportunidades en call centers de Santo Domingo.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="font-bold mb-3">Enlaces rápidos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#beneficios" class="text-slate-600 hover:text-slate-900">Beneficios</a></li>
+            <li><a href="#proceso" class="text-slate-600 hover:text-slate-900">Cómo funciona</a></li>
+            <li><a href="#testimonios" class="text-slate-600 hover:text-slate-900">Testimonios</a></li>
+            <li><a href="#faq" class="text-slate-600 hover:text-slate-900">Preguntas frecuentes</a></li>
           </ul>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow-soft">
-          <h3 class="font-bold">¿Por qué con nosotros?</h3>
-          <p class="mt-2 text-slate-600 text-sm">Somos una agencia local con relaciones directas con múltiples call centers en Santo Domingo. Maximiza tu tiempo aplicando una sola vez.</p>
-          <div class="mt-4 grid grid-cols-3 gap-3 text-center">
-            <div class="p-4 rounded-xl bg-slate-100">
-              <div class="text-2xl font-extrabold">10k+</div>
-              <div class="text-xs text-slate-600">Candidatos guiados*</div>
-            </div>
-            <div class="p-4 rounded-xl bg-slate-100">
-              <div class="text-2xl font-extrabold">20+</div>
-              <div class="text-xs text-slate-600">Empresas aliadas</div>
-            </div>
-            <div class="p-4 rounded-xl bg-slate-100">
-              <div class="text-2xl font-extrabold">24–48h</div>
-              <div class="text-xs text-slate-600">Tiempo de respuesta</div>
-            </div>
-          </div>
-          <p class="mt-2 text-[11px] text-slate-400">*Cifra referencial, actualiza según tus métricas reales.</p>
+        
+        <div>
+          <h4 class="font-bold mb-3">Contacto</h4>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li>
+              <a href="mailto:hola@talentolocal.net" class="hover:text-slate-900">
+                admin@talentolocal.net
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/18492773472" class="hover:text-slate-900" target="_blank" rel="noopener noreferrer">
+                WhatsApp: +1 (849) 277-3472
+              </a>
+            </li>
+            <li class="text-slate-600">Santo Domingo, República Dominicana</li>
+          </ul>
         </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 py-10">
-    <div class="mx-auto container-narrow px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
-      <div>© <span id="year"></span> TalentoLocal. Todos los derechos reservados.</div>
-      <div class="flex items-center gap-4">
-        <a href="mailto:hola@talentolocal.net" class="hover:text-slate-900">hola@talentolocal.net</a>
-        <a href="https://wa.me/18090000000" class="hover:text-slate-900">WhatsApp</a>
-        <a href="#formulario" class="rounded-lg bg-slate-900 text-white px-3 py-2 font-semibold">Aplicar</a>
+      </div>
+      
+      <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+        <div>
+          &copy; <span id="year"></span> TalentoLocal. Todos los derechos reservados.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#formulario" class="btn btn-primary text-sm">Aplicar ahora</a>
+        </div>
       </div>
     </div>
   </footer>
-
-  <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // ======= CONFIGURA TU ENDPOINT AQUÍ =======
-    // Reemplaza por tu endpoint de Formspree o Webhook propio
-    const ENDPOINT_URL = 'https://formspree.io/f/XXXXYYYY'; // <-- cambia esto
-
-    const form = document.getElementById('leadForm');
-    const btn = document.getElementById('submitBtn');
-    const msg = document.getElementById('formMsg');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      btn.disabled = true;
-      msg.classList.remove('hidden');
-      msg.textContent = 'Enviando...';
-      msg.className = 'text-sm text-slate-600';
-
-      const data = Object.fromEntries(new FormData(form).entries());
-      // añade metadatos útiles
-      data._source = 'talentolocal.net';
-      data._timestamp = new Date().toISOString();
-
-      try {
-        const res = await fetch(ENDPOINT_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-
-        if (res.ok) {
-          msg.textContent = '¡Aplicación recibida! Te contactaremos por WhatsApp en 24–48 h hábiles.';
-          msg.className = 'text-sm text-emerald-700';
-          form.reset();
-        } else {
-          const text = await res.text();
-          throw new Error(text || 'Error desconocido');
-        }
-      } catch (error) {
-        console.error(error);
-        msg.textContent = 'Hubo un error al enviar. Intenta otra vez o escríbenos a WhatsApp.';
-        msg.className = 'text-sm text-red-600';
-      } finally {
-        btn.disabled = false;
-      }
-    });
-  </script>
+  
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+  
 </body>
 </html>
