@@ -6,7 +6,7 @@ const CONFIG = {
   FORM_ENDPOINT: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec',
   GOOGLE_ANALYTICS_ID: 'G-XXXXXXXXXX',
   SITE_NAME: 'TalentoLocal',
-  WHATSAPP_NUMBER: '18090000000'
+  WHATSAPP_NUMBER: '18492773472'
 };
 
 // Initialize app when DOM is loaded
@@ -255,9 +255,9 @@ function validateForm(form) {
   // Validate WhatsApp (Dominican phone format)
   const whatsapp = form.querySelector('[name="whatsapp"]');
   if (whatsapp) {
-    const phoneRegex = /^(\+?1)?[\s\-]?\(?809\)?[\s\-]?\d{3}[\s\-]?\d{4}$/;
+    const phoneRegex = /^(\+?1)?[\s\-]?\(?(809|829|849)\)?[\s\-]?\d{3}[\s\-]?\d{4}$/;
     if (!phoneRegex.test(whatsapp.value.replace(/\s/g, ''))) {
-      showFieldError(whatsapp, 'Ingresa un número de WhatsApp válido (809-XXX-XXXX)');
+      showFieldError(whatsapp, 'Ingresa un número de WhatsApp válido (809/829/849-XXX-XXXX)');
       isValid = false;
     }
   }

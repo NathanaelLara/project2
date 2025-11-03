@@ -11,8 +11,7 @@ const STATIC_ASSETS = [
   '/styles.css',
   '/script.js',
   '/manifest.json',
-  'https://cdn.tailwindcss.com',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+  '/logo/tpLogo.jpeg'
 ];
 
 // Install event - cache static assets
@@ -56,11 +55,16 @@ self.addEventListener('fetch', event => {
     return;
   }
   
-  // Skip form submissions and analytics
+  // Skip form submissions, analytics, and external CDNs
   if (
     url.href.includes('script.google.com') ||
     url.href.includes('analytics') ||
-    url.href.includes('gtag')
+    url.href.includes('gtag') ||
+    url.href.includes('cdn.tailwindcss.com') ||
+    url.href.includes('fonts.googleapis.com') ||
+    url.href.includes('fonts.gstatic.com') ||
+    url.href.includes('images.unsplash.com') ||
+    url.origin !== self.location.origin
   ) {
     return event.respondWith(fetch(request));
   }

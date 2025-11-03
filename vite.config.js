@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
-import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import compression from 'vite-plugin-compression';
 
 export default defineConfig({
   root: '.',
   base: '/',
+  publicDir: 'public',
   
   build: {
     outDir: 'dist',
@@ -18,15 +18,24 @@ export default defineConfig({
       }
     },
     rollupOptions: {
+      input: {
+        main: 'index.html'
+      },
       output: {
         manualChunks: undefined,
-        assetFileNames: 'assets/[name].[hash][extname]',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.match(/\.(jpe?g|png|gif|svg|webp)$/i)) {
+            return 'assets/images/[name].[hash][extname]';
+          }
+          return 'assets/[name].[hash][extname]';
+        },
         chunkFileNames: 'assets/[name].[hash].js',
         entryFileNames: 'assets/[name].[hash].js'
       }
     },
     cssCodeSplit: false,
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    copyPublicDir: true
   },
   
   server: {
