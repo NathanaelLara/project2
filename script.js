@@ -228,6 +228,7 @@ function initFormHandling() {
       }
 
       showSuccess();
+      clearQueryParams();
       form.reset();
       
       // Track conversion
@@ -325,6 +326,13 @@ function showError(message) {
 function sanitizeInput(value) {
   if (typeof value !== 'string') return '';
   return value.replace(/[<>]/g, '').trim();
+}
+
+function clearQueryParams() {
+  if (window.history.replaceState) {
+    const baseUrl = window.location.origin + window.location.pathname + window.location.hash;
+    window.history.replaceState(null, document.title, baseUrl);
+  }
 }
 
 // FAQ accordion
