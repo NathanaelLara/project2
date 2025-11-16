@@ -195,6 +195,7 @@ body {
   font-size: 0.9375rem;
   transition: var(--transition);
   background-color: white;
+  color: var(--color-text);
 }
 
 .form-input:focus,
@@ -317,11 +318,12 @@ body {
 .faq-question {
   width: 100%;
   padding: 1.25rem;
-  background: none;
+  background: white;
   border: none;
   text-align: left;
   font-size: 1rem;
   font-weight: 600;
+  color: #94a3b8;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -331,6 +333,11 @@ body {
 
 .faq-question:hover {
   background-color: #f8fafc;
+  color: var(--color-text);
+}
+
+.faq-item.active .faq-question {
+  color: var(--color-text);
 }
 
 .faq-icon {

@@ -1,28 +1,22 @@
+// tailwind.config.js
 export default {
-  content: [
-    './index.html',
-    './script.js'
-  ],
+  content: ["./index.html", "./script.js"],
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#0f172a',
-          hover: '#1e293b'
+        brand: {
+          primary: "#FF28C9",
+          "primary-dark": "#C01994",
+          dark: "#0B0314",
+          "gradient-from": "#15051F",
+          "gradient-to": "#FF28C9",
+          light: "#F9FAFB",
         },
-        accent: {
-          DEFAULT: '#6ee7b7'
-        }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+        sans: ["Poppins", "system-ui", "sans-serif"],
       },
-      boxShadow: {
-        'soft': '0 10px 30px rgba(0, 0, 0, 0.08)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-      }
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };
-

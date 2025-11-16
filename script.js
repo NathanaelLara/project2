@@ -1,3 +1,10 @@
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+// Supabase configuration
+const SUPABASE_URL = 'https://igpxwybwujyyvqybkwym.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlncHh3eWJ3dWp5eXZxeWJrd3ltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMyOTM4MjEsImV4cCI6MjA3ODg2OTgyMX0.3PqIzLf8F61O03CcocIRAoV4B0e9DtWW1MBk5SJNesk';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 // TalentoLocal - Main JavaScript
 
 // Configuration
@@ -202,36 +209,32 @@ function initFormHandling() {
     formMsg.textContent = 'Procesando tu aplicación...';
     formMsg.className = 'text-sm text-slate-600';
     
-    // Prepare form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    
-    // Add metadata
-    data._source = window.location.hostname;
-    data._timestamp = new Date().toISOString();
-    data._userAgent = navigator.userAgent;
-    data._referrer = document.referrer || 'Direct';
+    // Prepare sanitized data
+    const lead = {
+      nombre: sanitizeInput(form.nombre.value),
+      whatsapp: sanitizeInput(form.whatsapp.value),
+      email: sanitizeInput(form.email.value || ''),
+      sector: sanitizeInput(form.sector.value || ''),
+      ingles: sanitizeInput(form.ingles.value),
+      experiencia: sanitizeInput(form.experiencia.value || ''),
+      disponibilidad: sanitizeInput(form.disponibilidad.value || ''),
+      cv: sanitizeInput(form.cv.value || '')
+    };
     
     try {
-      const response = await fetch(CONFIG.FORM_ENDPOINT, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-      });
-      
-      // Since we're using no-cors, we can't read the response
-      // Assume success if no error is thrown
+      const { error } = await supabase.from('leads').insert([lead]);
+      if (error) {
+        throw error;
+      }
+
       showSuccess();
       form.reset();
       
       // Track conversion
       trackEvent('form_submission', {
         form_name: 'lead_form',
-        nivel_ingles: data.ingles,
-        experiencia: data.experiencia
+        nivel_ingles: lead.ingles,
+        experiencia: lead.experiencia
       });
       
     } catch (error) {
@@ -317,6 +320,11 @@ function showError(message) {
   const formMsg = document.getElementById('formMsg');
   formMsg.textContent = message;
   formMsg.className = 'text-sm text-red-600 font-semibold';
+}
+
+function sanitizeInput(value) {
+  if (typeof value !== 'string') return '';
+  return value.replace(/[<>]/g, '').trim();
 }
 
 // FAQ accordion
