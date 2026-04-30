@@ -204,9 +204,9 @@ function initFormHandling() {
     
     // Disable button and show loading state
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner"></span> Enviando...';
+    submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
     formMsg.classList.remove('hidden');
-    formMsg.textContent = 'Procesando tu aplicación...';
+    formMsg.textContent = 'Processing your application...';
     formMsg.className = 'text-sm text-slate-600';
     
     // Prepare sanitized data
@@ -240,10 +240,10 @@ function initFormHandling() {
       
     } catch (error) {
       console.error('Form submission error:', error);
-      showError('Hubo un error al enviar tu aplicación. Por favor intenta de nuevo o contáctanos por WhatsApp.');
+      showError('There was an error sending your application. Please try again or contact us on WhatsApp.');
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar aplicación';
+      submitBtn.textContent = 'Submit application';
     }
   });
 }
@@ -252,10 +252,10 @@ function initFormHandling() {
 function validateForm(form) {
   let isValid = true;
   
-  // Validate nombre (at least 2 words)
+  // Validate full name (at least 2 words)
   const nombre = form.querySelector('[name="nombre"]');
   if (nombre && nombre.value.trim().split(' ').length < 2) {
-    showFieldError(nombre, 'Por favor ingresa tu nombre completo');
+    showFieldError(nombre, 'Please enter your full name');
     isValid = false;
   }
   
@@ -264,7 +264,7 @@ function validateForm(form) {
   if (whatsapp) {
     const phoneRegex = /^(\+?1)?[\s\-]?\(?(809|829|849)\)?[\s\-]?\d{3}[\s\-]?\d{4}$/;
     if (!phoneRegex.test(whatsapp.value.replace(/\s/g, ''))) {
-      showFieldError(whatsapp, 'Ingresa un número de WhatsApp válido (809/829/849-XXX-XXXX)');
+      showFieldError(whatsapp, 'Enter a valid WhatsApp number (809/829/849-XXX-XXXX)');
       isValid = false;
     }
   }
@@ -274,7 +274,7 @@ function validateForm(form) {
   if (email && email.value) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value)) {
-      showFieldError(email, 'Ingresa un correo electrónico válido');
+      showFieldError(email, 'Enter a valid email address');
       isValid = false;
     }
   }
@@ -282,7 +282,7 @@ function validateForm(form) {
   // Validate consent checkbox
   const consent = form.querySelector('#consent');
   if (consent && !consent.checked) {
-    showFieldError(consent, 'Debes aceptar los términos para continuar');
+    showFieldError(consent, 'You must accept the terms to continue');
     isValid = false;
   }
   
@@ -310,7 +310,7 @@ function clearFormErrors() {
 
 function showSuccess() {
   const formMsg = document.getElementById('formMsg');
-  formMsg.textContent = '¡Aplicación recibida con éxito! Te contactaremos por WhatsApp en 24-48 horas hábiles.';
+  formMsg.textContent = 'Application received successfully! We will contact you on WhatsApp within 24-48 business hours.';
   formMsg.className = 'text-sm text-emerald-700 font-semibold';
   
   // Scroll to message

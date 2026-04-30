@@ -1,7 +1,7 @@
 {
-  "name": "TalentoLocal - Reclutamiento Call Centers",
+  "name": "TalentoLocal - Bilingual Call Center Recruitment",
   "short_name": "TalentoLocal",
-  "description": "Agencia de reclutamiento para call centers en Santo Domingo",
+  "description": "Bilingual call center recruitment in Santo Domingo",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -22,7 +22,7 @@
     }
   ],
   "categories": ["business", "productivity"],
-  "lang": "es-DO",
+  "lang": "en",
   "dir": "ltr",
   "scope": "/",
   "screenshots": [
@@ -41,9 +41,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Aplicar ahora",
-      "short_name": "Aplicar",
-      "description": "Aplicar a vacantes de call center",
+      "name": "Apply now",
+      "short_name": "Apply",
+      "description": "Apply to bilingual call center openings",
       "url": "/#formulario",
       "icons": [
         {
